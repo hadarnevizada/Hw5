@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yayandroid:LocationManager:2.0.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LocationManager-2.0.1.aar/f504ab787595b2e7c10d78e22ff44d99/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LocationManager-2.0.1.aar/f504ab787595b2e7c10d78e22ff44d99/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LocationManager-2.0.1.aar/f504ab787595b2e7c10d78e22ff44d99/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yayandroid/LocationManager/2.0.1/4cb14a8d8ee68d99163b5ae5603d0ed880381ba2/LocationManager-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

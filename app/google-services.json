@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "607205647355",
+    "firebase_url": "https://kotelmania.firebaseio.com",
+    "project_id": "kotelmania",
+    "storage_bucket": "kotelmania.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607205647355:android:8a704b7b6974b655",
+        "android_client_info": {
+          "package_name": "com.example.ivan.kotelmania"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607205647355-3u9a927jcvrhchbj3dp21ljfulru68dm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_q8HOWw9gg4j2rOxfT-bxp8sMJGsYROU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607205647355-3u9a927jcvrhchbj3dp21ljfulru68dm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

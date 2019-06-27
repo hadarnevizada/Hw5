@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+
+    <EditText
+        android:id="@+id/add_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Heading"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="26sp"
+        />
+
+    <EditText
+        android:paddingTop="40dp"
+        android:id="@+id/add_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_heading"
+        android:hint="content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="16sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="4dp"
+        android:background="#558299ff"
+        android:onClick="addANote"
+        android:text="Add a note"
+        android:textColor="#525252" />
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/buttonLoadPicture"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="50dp"></ImageView>
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="258dp"
+        android:layout_weight="0"
+        android:text="Load Picture"></Button>
+
+</RelativeLayout>
