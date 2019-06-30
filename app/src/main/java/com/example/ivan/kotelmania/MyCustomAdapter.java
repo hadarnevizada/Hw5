@@ -89,12 +89,9 @@ public class MyCustomAdapter extends ArrayAdapter<Note> {
             @Override
             public void onClick(View v) {
                 Note note = list.get(position);
-//                note.deleteFromDB(MainActivity.getDbHelper().getWritableDatabase());
                 String uid = FirebaseAuth.getInstance().getUid();
                 String dbKey = note.dbKey;
                 FirebaseDatabase.getInstance().getReference().child(uid).child("notes").child(dbKey).removeValue();
-//                list.remove(position);
-//                notifyDataSetChanged();
                 Snackbar.make(v, "note has been removed!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }

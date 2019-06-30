@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                //nothing
             }
 
             @Override
@@ -144,10 +143,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        //sql part
-//        dbHelper = new DBHelper(this);
-//        notes = Note.getAllNotes(new DBHelper(this).getReadableDatabase());
-//        listView.setAdapter(new MyCustomAdapter(notes, this));
+
         final Context originThis = this;
         FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()).child("notes").addValueEventListener(new ValueEventListener() {
             @Override
@@ -212,14 +208,12 @@ public class MainActivity extends AppCompatActivity {
 
                 if (activity.equals("add")) {
                     Note note = new Note(0, dbKey, headingText, contentText, "sent", date);
-//                    note.addToDB(dbHelper.getWritableDatabase());
                 } else if (activity.equals("edit")) {
                     Note note = new Note(id, dbKey, headingText, contentText, "sent", date);
                     note.updateDB(dbHelper.getWritableDatabase());
                     Snackbar.make(findViewById(R.id.listView), "note has been edited!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-//                refreshNotes();
             }
         }
     }
