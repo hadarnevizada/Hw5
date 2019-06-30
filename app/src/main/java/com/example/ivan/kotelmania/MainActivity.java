@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Looper.loop();
             }
-        }, 5000, 5000);
+        },5000,5000);
 
         final FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "lat: " + lat + ", lng: " + lng, Toast.LENGTH_LONG).show();
                             if (Math.abs(lat - 33.237465) < 0.00005 && Math.abs(lng - 35.606734) < 0.00005) {
                                 Snackbar.make(MainActivity.this.content, "note has been removed!", Snackbar.LENGTH_LONG)
-                                        .setAction("Action", null).show();
+                                        .setAction("Action ", null).show();
                             }
                         } else {
                             Toast.makeText(MainActivity.this, "no location found!", Toast.LENGTH_LONG).show();
