@@ -72,11 +72,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
-//                if(!userName.equals("Dari") && !PassNum.equals("Dari") ) {
-//                    Toast.makeText(LoginActivity.this, "User or password incorect.", Toast.LENGTH_LONG).show();
-//                    return ;
-//                }
-
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivityForResult(intent, 1);
             }
