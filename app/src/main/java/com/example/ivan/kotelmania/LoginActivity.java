@@ -41,39 +41,39 @@ public class LoginActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                editUserName = findViewById(R.id.UserName);
-                editPassNum = findViewById(R.id.Password);
-                final String userName = editUserName.getText().toString();
-                final String passNum = editPassNum.getText().toString();
+            editUserName = findViewById(R.id.UserName);
+            editPassNum = findViewById(R.id.Password);
+            final String userName = editUserName.getText().toString();
+            final String passNum = editPassNum.getText().toString();
 
-                auth.signInWithEmailAndPassword(userName,passNum).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            //login success
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivityForResult(intent, 1);
-                        } else {
-                            //login failed - create new user and signIn
-                            auth.createUserWithEmailAndPassword(userName,passNum).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        //success to create new user and login
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                        startActivityForResult(intent, 1);
-                                    } else {
-                                        //failed to create new user
-                                        Log.e(TAG,task.toString());
-                                    }
-                                }
-                            });
+            auth.signInWithEmailAndPassword(userName,passNum).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    //login success
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivityForResult(intent, 1);
+                } else {
+                    //login failed - create new user and signIn
+                    auth.createUserWithEmailAndPassword(userName,passNum).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                //success to create new user and login
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivityForResult(intent, 1);
+                            } else {
+                                //failed to create new user
+                                Log.e(TAG,task.toString());
+                            }
                         }
-                    }
-                });
+                    });
+                }
+                }
+            });
 
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivityForResult(intent, 1);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivityForResult(intent, 1);
             }
         });
     }

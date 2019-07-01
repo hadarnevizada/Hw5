@@ -112,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
-                startActivityForResult(intent, 1);
+            Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
+            startActivityForResult(intent, 1);
             }
         });
 
@@ -121,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
         fundraising.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FundraisingActivity.class);
-                startActivityForResult(intent, 1);
+            Intent intent = new Intent(MainActivity.this, FundraisingActivity.class);
+            startActivityForResult(intent, 1);
             }
         });
 
